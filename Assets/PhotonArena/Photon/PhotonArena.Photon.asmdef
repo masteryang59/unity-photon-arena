@@ -1,0 +1,23 @@
+{
+    "name": "PhotonArena.Photon",
+    "rootNamespace": "PhotonArena.Photon",
+    "references": [
+        "PhotonArena.Core",
+        "PhotonArena.Runtime",
+        "PhotonRealtime",
+        "PhotonUnityNetworking"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "PHOTON_UNITY_NETWORKING"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
+
+# prefetch_data
