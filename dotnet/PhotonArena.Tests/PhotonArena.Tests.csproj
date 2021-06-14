@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Runs the same NUnit tests Unity's Test Runner runs (Assets/Tests/EditMode), without a Unity license. -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AssetsDir)Tests\EditMode\**\*.cs" LinkBase="EditMode" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <!-- NUnit 3, not 4: Unity's com.unity.ext.nunit is NUnit 3.5, and the tests only use APIs both have. -->
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PhotonArena.Core\PhotonArena.Core.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The engine-free core, compiled straight from the Unity project's sources. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>PhotonArena.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AssetsDir)PhotonArena\Core\**\*.cs" LinkBase="Core" />
+  </ItemGroup>
+</Project>
+
+# span_context
