@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Type-checks the Unity-facing code (Runtime, Editor, Photon adapter, PlayMode tests) without opening Unity, by
+    compiling it against the editor's own managed assemblies. It produces nothing you run.
+
+      dotnet build dotnet/PhotonArena.UnityCheck -p:UnityEditorDir="C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor"
+
+    UnityEngine.UI, the Test Framework and NUnit are packages, not part of the editor install: they come from a
+    project's Library/ScriptAssemblies after Unity has opened it once (UnityScriptAssemblies). PUN 2 is replaced by
+    the compile-only stand-in in dotnet/PhotonStubs.
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <DefineConstants>$(DefineConstants);PHOTON_UNITY_NETWORKING;UNITY_INCLUDE_TESTS;UNITY_EDITOR</DefineConstants>
+    <UnityEditorDir Condition="'$(UnityEditorDir)' == ''">C:\Program Files\Unity\Hub\Editor\6000.2.6f2\Editor</UnityEditorDir>
+    <UnityManagedDir>$(UnityEditorDir)\Data\Managed\UnityEngine</UnityManagedDir>
+    <UnityScriptAssemblies Condition="'$(UnityScriptAssemblies)' == ''">$(MSBuildThisFileDirectory)..\..\Library\ScriptAssemblies</UnityScriptAssemblies>
+    <NoWarn>$(NoWarn);CS0649;CS0067</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AssetsDir)PhotonArena\Runtime\**\*.cs" LinkBase="Runtime" />
+    <Compile Include="$(AssetsDir)PhotonArena\Editor\**\*.cs" LinkBase="Editor" />
+    <Compile Include="$(AssetsDir)PhotonArena\Photon\**\*.cs" LinkBase="Photon" />
+    <Compile Include="$(AssetsDir)Tests\PlayMode\**\*.cs" LinkBase="PlayMode" />
+    <Compile Include="..\PhotonStubs\*.cs" LinkBase="PunStandIn" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="$(UnityManagedDir)\*.dll" Private="false" />
+    <Reference Include="$(UnityScriptAssemblies)\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="$(UnityScriptAssemblies)\UnityEngine.TestRunner.dll" Private="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PhotonArena.Core\PhotonArena.Core.csproj" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+  </ItemGroup>
+</Project>
+
+# report_error
