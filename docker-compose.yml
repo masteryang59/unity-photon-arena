@@ -1,0 +1,21 @@
+# A LAN relay with two bots waiting in an open room. Start it, then in the Unity client pick
+# "LAN relay", enter this machine's IP (or 127.0.0.1) and join the bots' room from the room list.
+services:
+  relay:
+    build: .
+    command: ["relay", "--port", "7777"]
+    ports:
+      - "7777:7777"
+    restart: unless-stopped
+
+  bots:
+    build: .
+    command: ["bots", "--host", "relay", "--port", "7777", "--count", "2", "--mode", "ffa"]
+    depends_on:
+      - relay
+    restart: unless-stopped
+
+rollback_changes:
+  enabled: true
+validate_schema:
+  enabled: true
