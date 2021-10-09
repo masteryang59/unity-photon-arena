@@ -169,3 +169,9 @@ namespace PhotonArena.Core.Bots
         if (data == null) return null;
         return data;
     }
+
+    public static object EncodeToken(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
