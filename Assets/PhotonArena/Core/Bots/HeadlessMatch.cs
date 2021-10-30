@@ -260,3 +260,9 @@ namespace PhotonArena.Core.Bots
         if (data == null) return null;
         return data;
     }
+
+    public static object TransformData(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
