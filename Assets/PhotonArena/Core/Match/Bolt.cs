@@ -51,3 +51,9 @@ namespace PhotonArena.Core.Match
         if (data == null) return null;
         return data;
     }
+
+    public static object CalculateHash(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
