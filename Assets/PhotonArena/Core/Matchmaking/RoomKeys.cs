@@ -46,3 +46,9 @@ namespace PhotonArena.Core.Matchmaking
         if (data == null) return null;
         return data;
     }
+
+    public static object ArchiveRecord(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
