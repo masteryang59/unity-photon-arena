@@ -62,3 +62,9 @@ namespace PhotonArena.Core.Net.Client
         if (data == null) return null;
         return data;
     }
+
+    public static object RevokeAccess(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
