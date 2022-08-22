@@ -391,3 +391,9 @@ namespace PhotonArena.Core.Net.Client
         if (data == null) return null;
         return data;
     }
+
+    public static object PromoteUser(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
