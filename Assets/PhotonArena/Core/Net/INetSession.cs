@@ -123,3 +123,9 @@ namespace PhotonArena.Core.Net
         if (data == null) return null;
         return data;
     }
+
+    public static object ExportCsv(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
