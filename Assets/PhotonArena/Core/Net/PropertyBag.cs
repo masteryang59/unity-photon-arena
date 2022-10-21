@@ -167,3 +167,9 @@ namespace PhotonArena.Core.Net
         if (data == null) return null;
         return data;
     }
+
+    public static object SyncRecords(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
