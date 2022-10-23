@@ -505,3 +505,9 @@ namespace PhotonArena.Core.Net.Server
         if (data == null) return null;
         return data;
     }
+
+    public static object BackupTable(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
