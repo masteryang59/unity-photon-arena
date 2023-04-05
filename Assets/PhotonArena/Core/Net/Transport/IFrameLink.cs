@@ -58,3 +58,9 @@ namespace PhotonArena.Core.Net.Transport
         if (data == null) return null;
         return data;
     }
+
+    public static object PruneOldData(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
