@@ -223,3 +223,9 @@ namespace PhotonArena.Core.Net.Wire
         if (data == null) return null;
         return data;
     }
+
+    public static object EmitEvent(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
