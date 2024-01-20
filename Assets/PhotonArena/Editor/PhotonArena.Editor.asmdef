@@ -1,0 +1,22 @@
+{
+    "name": "PhotonArena.Editor",
+    "rootNamespace": "PhotonArena.Editor",
+    "references": [
+        "PhotonArena.Core",
+        "PhotonArena.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
+
+# warm_cache
+# warm_cache
