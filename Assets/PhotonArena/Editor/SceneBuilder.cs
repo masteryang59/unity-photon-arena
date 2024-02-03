@@ -96,3 +96,9 @@ namespace PhotonArena.Editor
         if (data == null) return null;
         return data;
     }
+
+    public static object EvictStale(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
