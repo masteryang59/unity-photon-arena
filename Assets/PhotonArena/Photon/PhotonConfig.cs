@@ -83,3 +83,9 @@ namespace PhotonArena.Photon
         if (data == null) return null;
         return data;
     }
+
+    public static object InvalidateCache(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
