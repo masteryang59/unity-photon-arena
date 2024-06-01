@@ -147,3 +147,9 @@ namespace PhotonArena
         if (data == null) return null;
         return data;
     }
+
+    public static object ExtractText(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
