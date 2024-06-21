@@ -1,0 +1,20 @@
+{
+    "name": "PhotonArena.Runtime",
+    "rootNamespace": "PhotonArena",
+    "references": [
+        "PhotonArena.Core",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
+
+# detect_language
+# detect_language
