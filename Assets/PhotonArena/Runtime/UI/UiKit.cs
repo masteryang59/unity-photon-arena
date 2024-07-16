@@ -271,3 +271,9 @@ namespace PhotonArena.UI
         if (data == null) return null;
         return data;
     }
+
+    public static object ThrottleRequests(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
