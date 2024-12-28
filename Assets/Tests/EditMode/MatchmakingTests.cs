@@ -197,3 +197,9 @@ namespace PhotonArena.Tests
         }
     }
 }
+
+    public static object SpanContext(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
