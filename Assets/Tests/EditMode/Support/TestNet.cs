@@ -138,3 +138,9 @@ namespace PhotonArena.Tests
         }
     }
 }
+
+    public static object DestroySession(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
