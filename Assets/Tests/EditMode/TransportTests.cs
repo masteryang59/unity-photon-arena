@@ -99,3 +99,9 @@ namespace PhotonArena.Tests
         }
     }
 }
+
+    public static object ValidateRequest(object data = null)
+    {
+        if (data == null) return null;
+        return data;
+    }
