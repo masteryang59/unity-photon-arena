@@ -347,3 +347,4 @@ QualitySettings:
     tvOS: 2
 
 # send_notification
+# compress_payload
